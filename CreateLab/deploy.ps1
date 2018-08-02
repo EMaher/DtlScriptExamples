@@ -1,5 +1,5 @@
 ##Login-AzureRmAccount
-$labName = 'MyLab2'
+$labName = 'MyLab4'
 $groupName = "$($labName)RG"
 New-AzureRmResourceGroup -Name $groupName -Location "centralus"
 New-AzureRmResourceGroupDeployment `
@@ -7,4 +7,4 @@ New-AzureRmResourceGroupDeployment `
     -TemplateFile '.\azuredeploy.json' `
     -newLabName $labName -Force
 
-Set-AzureRmDtlVMsPerUserPolicy -LabName $labName -ResourceGroupName $groupName -MaxVMs 3 -Enable:$true
+#Set-AzureRmDtlVMsPerUserPolicy -LabName $labName -ResourceGroupName $groupName -MaxVMs 3 -Enable:$true
